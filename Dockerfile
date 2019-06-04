@@ -19,5 +19,7 @@ run npm run build
 from nginx
 copy --from=builder /app/build /usr/share/nginx/html
 
+# exposes port to AWS elastic beanstalk
+expose 80
 
 # to run build env: sudo docker run -8080:80 5987b29ed7ba
